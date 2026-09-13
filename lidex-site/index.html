@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lidex — The Web3 Suite</title>
+  <meta name="description" content="Lidex is building the essential suite of Web3 products — trading, wallet, apps and more. Live market view, products and connect-wallet login." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="assets/lidex_logo.png" alt="Lidex logo" />
+        <span>Lidex</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#products">Products</a>
+        <a href="#market">Market</a>
+        <a href="#vision">Vision</a>
+      </nav>
+      <div class="nav-right">
+        <div class="socials" aria-label="Social media">
+          <a href="https://x.com/lidexOfficial" target="_blank" rel="noopener" aria-label="Lidex on X" title="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+          </a>
+          <a href="https://t.me/lidexOfficial" target="_blank" rel="noopener" aria-label="Lidex on Telegram" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+        <span class="wallet-slot" data-wallet-slot></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero">
+    <p class="eyebrow">The Lidex suite</p>
+    <h1>Everything Web3.<br />One home.</h1>
+    <p>Lidex is building the essential products of Web3 — trading, wallet, apps and more.
+       We start small, ship what works, and build the rest from the ground up.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#products">Explore products</a>
+      <span class="wallet-slot" data-wallet-slot></span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRODUCTS (rendered by js/products.js + js/main.js) ═══════════════ -->
+  <main id="products">
+    <section class="section" id="section-live">
+      <div class="section-head">
+        <span class="section-label">Live now</span>
+        <h2>Shipped and ready to use</h2>
+        <p>Three products, live today. Each one stands alone — and they work even better together.</p>
+      </div>
+
+      <!-- search + view toggle -->
+      <div class="products-toolbar">
+        <div class="search-box">
+          <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="product-search" type="search" placeholder="Search products…" autocomplete="off" spellcheck="false" aria-label="Search products" />
+          <button id="search-clear" class="search-clear" aria-label="Clear search" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="seg view-toggle" role="group" aria-label="Products view">
+          <button data-view="grid" class="active" aria-label="Grid view" aria-pressed="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </button>
+          <button data-view="list" aria-label="List view" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid" id="products-grid"></div>
+    </section>
+
+    <!-- ═══════════════ MARKET (candle chart + live 24h prices) ═══════════════ -->
+    <section class="section" id="market">
+      <div class="section-head">
+        <span class="section-label">Market</span>
+        <h2>Live market view</h2>
+        <p>Candlestick charts with live 24-hour prices. Click a coin to load it on the chart.</p>
+      </div>
+      <div class="market-grid">
+        <div class="card market-chart-card">
+          <div class="chart-head">
+            <div class="seg hidden" id="chart-src" role="tablist" aria-label="Chart source">
+              <button data-src="tv">Widget</button>
+              <button data-src="cg" class="active">Candles</button>
+            </div>
+            <div class="seg" id="mkt-intervals" role="tablist" aria-label="Candle interval">
+              <button data-interval="1h" class="active">1H</button>
+              <button data-interval="4h">4H</button>
+              <button data-interval="1d">1D</button>
+            </div>
+            <span class="feed-badge" id="feed-badge"></span>
+          </div>
+          <div class="chart-stage">
+            <div id="tv-widget" class="tv-widget hidden"></div>
+            <div id="cg-chart" class="cg-chart"></div>
+          </div>
+        </div>
+
+        <div class="card market-list-card">
+          <h3>24h market</h3>
+          <div id="mkt-rows"></div>
+          <p class="mkt-foot" id="mkt-foot">Fetching live prices…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ VISION ═══════════════ -->
+  <section class="vision" id="vision">
+    <div class="vision-inner">
+      <h2>Our vision</h2>
+      <p>Web3 should feel as effortless as the open web. That's why Lidex builds the whole stack
+         in-house — trading, wallet, apps, payments and everything in between.
+         We'll start slow, but we're building for the long run.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <a class="brand" href="/">
+          <img src="assets/lidex_logo.png" alt="Lidex logo" />
+          <span>Lidex</span>
+        </a>
+        <p>The essential suite of Web3 products, built in-house. One wallet, one home.</p>
+        <div class="socials foot-socials" aria-label="Social media">
+          <a href="https://x.com/lidexOfficial" target="_blank" rel="noopener" aria-label="Lidex on X" title="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644z"/></svg>
+          </a>
+          <a href="https://t.me/lidexOfficial" target="_blank" rel="noopener" aria-label="Lidex on Telegram" title="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Products</h4>
+          <a href="https://perp.lidex.tech" target="_blank" rel="noopener">Lidex Perps</a>
+          <a href="https://wallet.lidex.tech" target="_blank" rel="noopener">Lidex Wallet</a>
+          <a href="https://appstore.lidex.tech" target="_blank" rel="noopener">Lidex App Store</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="#vision">About</a>
+          <a href="#" onclick="return false">Careers</a>
+          <a href="#" onclick="return false">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="#" onclick="return false">Terms of Service</a>
+          <a href="#" onclick="return false">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Lidex.</span>
+      <span>Powered by <a href="https://token.lidex.tech" target="_blank" rel="noopener">Lidex Token (LDX)</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Lightweight Charts (renders the candle chart) -->
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@5.2.1/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/market.js"></script>
+  <script src="js/wallet.js"></script>
+
+  <!-- ═══════════════ Reown AppKit — official template (docs.reown.com) ═══════════════ -->
+  <script type="importmap">
+  {
+    "imports": {
+      "@reown/appkit": "https://esm.sh/@reown/appkit@1.8.23",
+      "@reown/appkit/networks": "https://esm.sh/@reown/appkit@1.8.23/networks",
+      "@reown/appkit-adapter-wagmi": "https://esm.sh/@reown/appkit-adapter-wagmi@1.8.23"
+    }
+  }
+  </script>
+  <script type="module" src="js/appkit.js"></script>
+</body>
+</html>
