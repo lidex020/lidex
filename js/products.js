@@ -50,6 +50,16 @@ const LIDEX_PRODUCTS = [
     url: "https://appstore.lidex.tech",
     status: "live",
   },
+  {
+    id: "token",
+    name: "Lidex Token (LDX)",
+    tagline: "The utility layer of the Lidex ecosystem",
+    description:
+      "Power the ecosystem with governance, rewards, and access across trading, wallet, and app experiences.",
+    icon: "assets/lidex_logo.png",
+    url: "https://token.lidex.tech",
+    status: "live",
+  },
 
   /* ── Example: how to add a product still in development ─────────
      {
