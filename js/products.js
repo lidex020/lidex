@@ -31,6 +31,16 @@ const LIDEX_PRODUCTS = [
     status: "live",
   },
   {
+    id: "swap",
+    name: "Lidex Swap",
+    tagline: "Swap tokens with live market insights",
+    description:
+      "Connect your wallet to swap tokens with live pricing, balances, and token security information.",
+    icon: "https://swap.lidex.tech/logo.png",
+    url: "https://swap.lidex.tech",
+    status: "live",
+  },
+  {
     id: "wallet",
     name: "Lidex Wallet",
     tagline: "Your keys. Your assets. Your rules.",

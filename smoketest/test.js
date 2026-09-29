@@ -78,15 +78,17 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   // 1) products rendered
   const cards = document.querySelectorAll("#products-grid .card");
-  check(`product cards rendered (4, got ${cards.length})`, cards.length === 4);
+  check(`product cards rendered (5, got ${cards.length})`, cards.length === 5);
   const names = [...cards].map((c) => c.querySelector("h3")?.textContent?.trim());
   check(
     `card names: ${names.join(", ")}`,
     JSON.stringify(names) ===
-      JSON.stringify(["Lidex Perps", "Lidex Wallet", "Lidex App Store", "Lidex Token (LDX)"])
+      JSON.stringify(["Lidex Perps", "Lidex Swap", "Lidex Wallet", "Lidex App Store", "Lidex Token (LDX)"])
   );
   const perpsHref = cards[0]?.getAttribute("href");
   check(`perps links to https://perp.lidex.tech (got ${perpsHref})`, perpsHref === "https://perp.lidex.tech");
+  const swapHref = cards[1]?.getAttribute("href");
+  check(`swap links to https://swap.lidex.tech (got ${swapHref})`, swapHref === "https://swap.lidex.tech");
 
   // 1b) products: search + view toggle (grid default)
   const search = document.getElementById("product-search");
@@ -110,18 +112,18 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   typeSearch("zzz-nothing");
   check(`no match → 0 cards + no-results (got ${visibleCards()} cards, nores: ${!!grid.querySelector(".no-results")})`, visibleCards() === 0 && !!grid.querySelector(".no-results"));
   grid.querySelector("#clear-search")?.click();
-  check(`clear from no-results → 4 cards (got ${visibleCards()})`, visibleCards() === 4);
+  check(`clear from no-results → 5 cards (got ${visibleCards()})`, visibleCards() === 5);
   typeSearch("app store");
   check(`multi-word search "app store" → 1 (got ${visibleCards()})`, visibleCards() === 1);
   typeSearch("");
-  check(`empty search → all 4 (got ${visibleCards()})`, visibleCards() === 4);
+  check(`empty search → all 5 (got ${visibleCards()})`, visibleCards() === 5);
   check("clear button hidden when empty", clearBtn.hidden);
 
   document.querySelector('.view-toggle [data-view="list"]')?.click();
   check(`list view applied (class: ${grid.className})`, grid.classList.contains("list"));
   check(`view choice persisted (got ${window.localStorage.getItem("lidex_view")})`, window.localStorage.getItem("lidex_view") === "list");
   check("list button active after toggle", document.querySelector('.view-toggle [data-view="list"]').classList.contains("active"));
-  check(`list view keeps all ${visibleCards()} cards`, visibleCards() === 4);
+  check(`list view keeps all ${visibleCards()} cards`, visibleCards() === 5);
   document.querySelector('.view-toggle [data-view="grid"]')?.click();
   check("grid view restored", !grid.classList.contains("list"));
 
